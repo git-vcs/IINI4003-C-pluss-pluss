@@ -1,3 +1,6 @@
+*
+!/**/
+!*.*
 CMakeCache.txt
 cmake_install.cmake
 Makefile
@@ -9,3 +12,5 @@ Makefile
 *.cmake
 *.o
 *.exe
+*.cbp
+assignment_03

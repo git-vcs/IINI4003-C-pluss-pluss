@@ -86,7 +86,7 @@ int main() {
     a = b + *c;
 
     //b brukes som referanse isteden for variabel
-    //&b = 2;
+    //&b = 2;g
 
     b = 2;
 
