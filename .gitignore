@@ -7,6 +7,7 @@ Makefile
 */cmake-build-debug
 */CMakeFiles
 */.idea
+*/*/.idea
 *.tar.gz
 *.gz
 *.cmake
