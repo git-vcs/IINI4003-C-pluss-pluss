@@ -4,6 +4,7 @@
 CMakeCache.txt
 cmake_install.cmake
 Makefile
+*/build
 */cmake-build-debug
 */CMakeFiles
 */.idea
@@ -15,3 +16,4 @@ Makefile
 *.exe
 *.cbp
 assignment_03
+*compile_commands.json
