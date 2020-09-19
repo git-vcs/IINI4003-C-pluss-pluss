@@ -49,21 +49,18 @@ public:
             int y_diff=to_y-from_y;
             if(x_diff<=1&&x_diff>=-1){
                 if(y_diff<=1&&y_diff>=-1){
-
                     return true;
                 }
             }
             return false;
-
         }
 
         std::string get_Piece()const override{
-            char kingw[]="\u2654";//white chess king
-            char kingb[]="\u265A";//black chess king
+            char kingw[]="\u265A";//white chess king
+            char kingb[]="\u2654";//black chess king
             if(color==Color::WHITE){
                 return kingw;
             } else return kingb;
-
         }
 
     };
@@ -83,7 +80,6 @@ public:
             int y_diff=to_y-from_y;
             if(x_diff==-2||x_diff==2){
                 if(y_diff==1||y_diff==-1){
-
                     return true;
                 }
             }
@@ -94,12 +90,11 @@ public:
                 }
             }
             return false;
-
         }
 
         std::string get_Piece()const override{
-            char kw[]="\u2658";//white chess knigth
-            char kb[]="\u265E";//Back chess knigth
+            char kw[]="\u265E";//white chess knigth
+            char kb[]="\u2658";//Backchess knigth
             if(color==Color::WHITE){
                 return kw;
             } else return kb;
@@ -109,8 +104,6 @@ public:
     };
 
     void print_board(){
-
-
         for(auto &column:squares){
             for(auto &piece:column){
                 if(piece){
@@ -118,11 +111,7 @@ public:
                 }else std::cout<<"[ ]";
             }
             std::cout<<std::endl;
-
         }
-
-
-
     }
 
     ChessBoard() {
