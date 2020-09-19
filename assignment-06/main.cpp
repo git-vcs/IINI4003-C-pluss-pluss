@@ -5,6 +5,15 @@
 
 using namespace std;
 
+
+class ChessBoardPrint{
+public:
+    ChessBoardPrint(){
+
+    }
+};
+
+
 class ChessBoard {
 public:
     enum class Color { WHITE,
@@ -161,7 +170,12 @@ public:
             return false;
         }
     }
-};
+}; /// slutt på Chessboard;
+
+
+
+
+
 
 int main() {
     ChessBoard board;
