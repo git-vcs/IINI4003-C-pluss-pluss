@@ -34,13 +34,31 @@ private:
                                  if (message == "exit")
                                      return;
 
+
                                  cout << "Message from a connected client: " << message << endl;
+                                 cout << "client url-request: " <<message.size()<< endl;
+                                 std::string html_start="<!DOCTYPE html><html><body>";
+                                 std::string html_end="</body></html>";
+
+                                 std::string html_body;
+                                 if(message == "GET / HTTP/1.1"){
+                                     html_body ="<h1>Dette er hovedsiden</h1>";
+                                 }else if(message=="GET /en_side HTTP/1.1"){
+                                     html_body ="<h1>Dette er en side</h1>";
+                                 }else {
+                                     html_body ="<h1>404 not found</h1>";
+                                 }
+
 
                                  auto write_buffer = make_shared<boost::asio::streambuf>();
                                  ostream write_stream(write_buffer.get());
 
                                  // Add message to be written to client:
-                                 write_stream << message << "\r\n";
+                                 write_stream <<"HTTP/1.1 200 OK"<<"\r\n"<<
+
+                                 "Content-Type: text/html; charset=UTF-8"<<"\r\n"
+                                 "Content-Length: "<<html_body.size()+html_start.size()+html_end.size()<<"\r\n\r\n"<<
+                                 html_start<<html_body<<html_end<<"\r\n";
 
                                  // Write to client
                                  async_write(connection->socket, *write_buffer,

@@ -112,6 +112,7 @@ public:
 
     };
 
+    //todo Bytt ut denne
     void print_board(){
         for(auto &column:squares){
             for(auto &piece:column){
@@ -159,7 +160,7 @@ public:
                 }
 
                 piece_to = move(piece_from);
-                print_board();
+                print_board(); //todo bytt ut denne
                 return true;
             } else {
                 cout << "can not move " << piece_from->type() << " from " << from << " to " << to << endl;
