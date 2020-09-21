@@ -221,7 +221,7 @@ ChessBoardPrint::ChessBoardPrint(ChessBoard& board) {
         board.on_piece_removed = [](const ChessBoard::Piece &piece, const string &square) {
             cout << piece.type() << " is being removed from " << square << endl;
         };
-        board.on_lost_game = [&print](ChessBoard::Color color) {
+        board.on_lost_game = [](ChessBoard::Color color) {
             if (color == ChessBoard::Color::WHITE)
                 cout << "Black"<<endl;
             else
