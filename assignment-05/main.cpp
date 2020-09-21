@@ -13,7 +13,7 @@ public:
     class Piece {
     public:
         Piece(Color color) : color(color) {}
-        virtual ~Piece() {} //garbage collection
+        virtual ~Piece(){} //garbage collection
 
         Color color;
         std::string color_string() const {
