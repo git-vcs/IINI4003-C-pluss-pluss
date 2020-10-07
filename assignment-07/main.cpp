@@ -14,8 +14,14 @@ void print(const string &text, const Fraction &broek) {
  * a) Lag funksjoner slik at vi kan skrive fraction1 – 5 og 5 – fraction1. Utvid main.cpp slik at du får prøvd dette. Hint: Den ene funksjonen kan ikke være en medlemsfunksjon.
  * b) Teori: Forklar hvordan 5 - 3 - fraction1 - 7 - fraction2 blir tolket. Hvilke versjoner av operatoren - blir brukt?
  *
- * Klammene er satt inn for å representere hvilke metoder som er burkt.
- *  (5 - 3) (- fraction1) (- 7) (- fraction2)
+ * # er satt for å kunnne referere til opperasjoneen.
+ *   #1  #2          #3   #4
+ *  5 - 3 - fraction1 - 7 - fraction2
+ * #metoder:
+ * 1: int -
+ * 2: - fraction
+ * 3: fraction -
+ * 4: - fraction
  *
  */
 

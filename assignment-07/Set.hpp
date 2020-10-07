@@ -18,7 +18,4 @@ public:
 
     //sette en mengde lik en annen mengde
     Set &operator=(Set &set);
-
-
-
 };
