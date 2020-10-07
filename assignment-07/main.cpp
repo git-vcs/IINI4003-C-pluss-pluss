@@ -1,6 +1,7 @@
 #include "fraction.hpp"
 #include <iostream>
 #include <string>
+#include "Set.hpp"
 
 using namespace std;
 
@@ -12,8 +13,24 @@ void print(const string &text, const Fraction &broek) {
  * Oppgave 1
  * a) Lag funksjoner slik at vi kan skrive fraction1 – 5 og 5 – fraction1. Utvid main.cpp slik at du får prøvd dette. Hint: Den ene funksjonen kan ikke være en medlemsfunksjon.
  * b) Teori: Forklar hvordan 5 - 3 - fraction1 - 7 - fraction2 blir tolket. Hvilke versjoner av operatoren - blir brukt?
+ *
+ * Klammene er satt inn for å representere hvilke metoder som er burkt.
+ *  (5 - 3) (- fraction1) (- 7) (- fraction2)
+ *
  */
 
+
+/*
+ * Oppgave 2
+ * å skrive ut en mengde
+ */
+
+void print(const Set set) {
+  for (int i = 0; i <(int)set.tall.size() ; ++i) {
+      cout<<set.tall[i]<<"\n";
+  }
+  cout<<"\n";
+}
 
 int main() {
   Fraction a(10, 20);
@@ -53,4 +70,26 @@ int main() {
   Fraction fraction2(1, 2);
     print("4- 1/2: ", 4-fraction2);
 
+
+
+    Set set;
+    set + 1;
+  set + 2;
+  set + 3;
+
+  Set set2;
+    set2 + 3;
+  set2 + 4;
+  set2 + 5;
+  set2 + 6;
+
+  //print(set);
+    Set test3=set2.getUnion(set);
+    print(test3);
+    set2=test3;
+  print(test3);
+
+
+
+    return 0;
 }

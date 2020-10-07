@@ -166,8 +166,6 @@ Fraction Fraction::operator-(const int &other) const {
 Fraction operator-(int integer,const Fraction &other) {
   //lager en uekte brøk av heltallet
   Fraction fraction(integer*other.denominator,other.denominator);
-
-
   return fraction - other;
 }
 
