@@ -17,3 +17,5 @@ Makefile
 *.cbp
 assignment_03
 *compile_commands.json
+*/imgui
+*/imgui-sfml
